@@ -1,104 +1,69 @@
 import React from "react";
+// components/Navbar.js
+
 import { useState } from "react";
 import Link from "next/link";
 
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div>
-      <nav className="bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                {/* Your logo or site name */}
-                <Link href={"/"} className="text-white">
-                  Your Logo
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              {/* Desktop navigation */}
-              <div className="ml-10 flex text-white items-baseline space-x-4">
-                <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
-                {/* Products dropdown */}
-                <div className="relative inline-block text-left">
-                  <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    type="button"
-                    className="text-white hover:text-gray-300"
-                  >
-                    Products
-                    <svg
-                      className="h-5 w-5 inline-block ml-1 -mr-1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 12l-8-8 1.5-1.5L10 9.5l6.5-6.5L18 4l-8 8z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  {isOpen && (
-                    <div className="absolute z-10 mt-2 bg-gray-800 rounded-md shadow-lg">
-                      <div className="py-1">
-                        <Link href="/products">All Products</Link>
-                        <Link href="/products/category1">Category 1</Link>
-                        <Link href="/products/category2">Category 2</Link>
-                        {/* Add more dropdown links as needed */}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-            {/* Hamburger menu for mobile */}
-            <div className="-mr-2 flex md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
-              >
-                <svg
-                  className="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  {isOpen ? (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16m-7 6h7"
-                    />
-                  )}
-                </svg>
-              </button>
+    <nav className="bg-gray-800 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              {/* Your logo or site name */}
+
+              <Link href="/" className="text-white">
+                Your Logo
+              </Link>
             </div>
           </div>
-        </div>
-        {/* Mobile navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 text-white pb-3 space-y-1 sm:px-3">
+          {/* Hamburger menu for mobile */}
+          <div className="-mr-2 flex md:hidden">
+            <button
+              onClick={toggleNav}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
+            >
+              <svg
+                className="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+          {/* Navigation links */}
+          <div className={`${isOpen ? "block" : "hidden"} md:block`}>
+            <div className="ml-10 flex items-baseline space-x-4">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
-              {/* Mobile version of Products dropdown */}
+              {/* Products dropdown */}
               <div className="relative inline-block text-left">
                 <button
-                  onClick={() => setIsOpen(!isOpen)}
+                  onClick={toggleNav}
                   type="button"
                   className="text-white hover:text-gray-300"
                 >
@@ -117,23 +82,22 @@ function Navbar() {
                   </svg>
                 </button>
                 {isOpen && (
-                  <div className="absolute z-10 mt-2 bg-gray-800 rounded-md shadow-lg">
-                    <div className="py-1">
-                      <Link href="/products">All Products</Link>
-                      <Link href="/products/category1">Category 1</Link>
-                      <Link href="/products/category2">Category 2</Link>
+                  <div className="absolute z-10 mt-2 bg-gray-800 rounded-md shadow-lg w-24">
+                    <div className="py-1 flex flex-col m-1 p-3">
+                      <Link href="/products">All</Link>
+                      <Link href="/products/category1">Category</Link>
+                      <Link href="/products/category2">Category</Link>
                       {/* Add more mobile dropdown links as needed */}
                     </div>
                   </div>
                 )}
               </div>
-              {/* End of mobile version of Products dropdown */}
             </div>
           </div>
-        )}
-      </nav>
-    </div>
+        </div>
+      </div>
+    </nav>
   );
-}
+};
 
 export default Navbar;

@@ -12,20 +12,16 @@ function Navbar() {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 {/* Your logo or site name */}
-                <Link href="/">
-                  <a className="text-white">Your Logo</a>
+                <Link href={"/"} className="text-white">
+                  Your Logo
                 </Link>
               </div>
             </div>
             <div className="hidden md:block">
               {/* Desktop navigation */}
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/">
-                  <a className="text-white hover:text-gray-300">Home</a>
-                </Link>
-                <Link href="/about">
-                  <a className="text-white hover:text-gray-300">About</a>
-                </Link>
+              <div className="ml-10 flex text-white items-baseline space-x-4">
+                <Link href="/">Home</Link>
+                <Link href="/about">About</Link>
                 {/* Products dropdown */}
                 <div className="relative inline-block text-left">
                   <button
@@ -50,21 +46,9 @@ function Navbar() {
                   {isOpen && (
                     <div className="absolute z-10 mt-2 bg-gray-800 rounded-md shadow-lg">
                       <div className="py-1">
-                        <Link href="/products">
-                          <a className="block px-4 py-2 text-white hover:text-gray-300">
-                            All Products
-                          </a>
-                        </Link>
-                        <Link href="/products/category1">
-                          <a className="block px-4 py-2 text-white hover:text-gray-300">
-                            Category 1
-                          </a>
-                        </Link>
-                        <Link href="/products/category2">
-                          <a className="block px-4 py-2 text-white hover:text-gray-300">
-                            Category 2
-                          </a>
-                        </Link>
+                        <Link href="/products">All Products</Link>
+                        <Link href="/products/category1">Category 1</Link>
+                        <Link href="/products/category2">Category 2</Link>
                         {/* Add more dropdown links as needed */}
                       </div>
                     </div>
@@ -108,13 +92,9 @@ function Navbar() {
         {/* Mobile navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link href="/">
-                <a className="text-white block hover:text-gray-300">Home</a>
-              </Link>
-              <Link href="/about">
-                <a className="text-white block hover:text-gray-300">About</a>
-              </Link>
+            <div className="px-2 pt-2 text-white pb-3 space-y-1 sm:px-3">
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
               {/* Mobile version of Products dropdown */}
               <div className="relative inline-block text-left">
                 <button
@@ -139,21 +119,9 @@ function Navbar() {
                 {isOpen && (
                   <div className="absolute z-10 mt-2 bg-gray-800 rounded-md shadow-lg">
                     <div className="py-1">
-                      <Link href="/products">
-                        <a className="block px-4 py-2 text-white hover:text-gray-300">
-                          All Products
-                        </a>
-                      </Link>
-                      <Link href="/products/category1">
-                        <a className="block px-4 py-2 text-white hover:text-gray-300">
-                          Category 1
-                        </a>
-                      </Link>
-                      <Link href="/products/category2">
-                        <a className="block px-4 py-2 text-white hover:text-gray-300">
-                          Category 2
-                        </a>
-                      </Link>
+                      <Link href="/products">All Products</Link>
+                      <Link href="/products/category1">Category 1</Link>
+                      <Link href="/products/category2">Category 2</Link>
                       {/* Add more mobile dropdown links as needed */}
                     </div>
                   </div>

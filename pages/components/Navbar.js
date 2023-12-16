@@ -60,6 +60,7 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
+              <Link href="/contact">Contact Us</Link>
               {/* Products dropdown */}
               <div className="relative inline-block text-left">
                 <button

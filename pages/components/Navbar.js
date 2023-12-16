@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="bg-gray-800 text-white top-0 fixed w-full mb-8 -z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -60,7 +60,7 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">Contact</Link>
               {/* Products dropdown */}
               <div className="relative inline-block text-left">
                 <button

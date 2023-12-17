@@ -56,6 +56,16 @@ function about() {
         </p>
       </div>
       <div className="mt-8">
+        <h3 className="text-3xl font-bold">Commitment to Sustainability </h3>
+        <p className="p-5 text-2xl">
+          Rasina Fashion is committed to sustainability. We believe in
+          responsible manufacturing practices, emphasizing eco-friendly
+          materials and ethical production processes. Our commitment extends to
+          minimizing our environmental footprint, ensuring a harmonious
+          coexistence with nature.
+        </p>
+      </div>
+      <div className="mt-8">
         <h3 className="text-3xl font-bold">Customer-Centric Philosophy</h3>
         <p className="p-5 text-2xl">
           At the heart of our ethos lies a profound dedication to our customers.

@@ -13,7 +13,7 @@ const Navbar = () => {
           <p>logo</p>
         </li>
         <li className="md:m-8 m-2 text-xs md:text-xl px-2 py-2 inline hover:text-green-500 rounded-2xl">
-          <Link href="#home">Home</Link>
+          <Link href="/">Home</Link>
         </li>
         <li className="md:m-8 m-2 text-xs md:text-xl px-2 py-2 inline hover:text-green-500 rounded-2xl">
           <Link href="#sevices-section">About Us</Link>

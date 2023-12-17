@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link href="/">Home</Link>
         </li>
         <li className="md:m-8 m-2 text-xs md:text-xl px-2 py-2 inline hover:text-green-500 rounded-2xl">
-          <Link href="#sevices-section">About Us</Link>
+          <Link href={"/about"}>About Us</Link>
         </li>
         <li className="md:m-8 m-2 text-xs md:text-xl px-2 py-2 inline hover:text-green-500 rounded-2xl">
           <div class="relative inline-block dropdown">
@@ -37,7 +37,7 @@ const Navbar = () => {
           </div>
         </li>
         <li className="md:m-8 m-2 text-xs md:text-xl px-2 py-2 inline hover:text-green-500 rounded-2xl">
-          <Link href="#contact">Contact Us</Link>
+          <Link href="/contact">Contact Us</Link>
         </li>
       </ul>
     </nav>

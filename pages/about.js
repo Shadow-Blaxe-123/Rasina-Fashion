@@ -25,7 +25,7 @@ function about() {
       <div className="mt-8">
         <h3 className="text-3xl font-bold">Our Journey</h3>
         <p className="p-5 text-2xl">
-          Founded in [year], Rasina Fashion embarked on a journey fueled by a
+          Founded in 2021, Rasina Fashion embarked on a journey fueled by a
           passion for delivering exceptional garments. What started as a small
           workshop has evolved into a state-of-the-art manufacturing facility,
           blending traditional craftsmanship with modern technology. The

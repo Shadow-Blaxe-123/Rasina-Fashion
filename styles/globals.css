@@ -13,3 +13,42 @@
     height: 100%;
     z-index: -2;
 }
+
+/* Optional: Custom styles for dropdown */
+.dropdown {
+    position: relative;
+  }
+
+  /* Hide the dropdown menu by default */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background: black;
+    /* color: white; */
+  }
+  .dropdown-menu a {
+    color: white; /* Set text color to white */
+    /* font-size: 16px; Increase font size */
+  }
+
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* Position the arrow near "Products" label */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    right: -8px; /* Adjust this value to align the arrow properly */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #000 transparent transparent transparent;
+  }

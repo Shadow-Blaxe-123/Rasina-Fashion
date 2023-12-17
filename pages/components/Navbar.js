@@ -19,15 +19,22 @@ const Navbar = () => {
           <Link href="#sevices-section">About Us</Link>
         </li>
         <li className="md:m-8 m-2 text-xs md:text-xl px-2 py-2 inline hover:text-green-500 rounded-2xl">
-          <label htmlFor="products">Products </label>
-
-          <select name="products" id="products">
-            <option value="Denim">Products</option>
-            <option value="Denim">Denim</option>
-            <option value="Denim">Denim</option>
-            <option value="Denim">Denim</option>
-            <option value="Denim">Denim</option>
-          </select>
+          <div class="relative inline-block dropdown">
+            <div class="flex items-center cursor-pointer">
+              <span>Products</span>
+              <span class="arrow"></span>
+            </div>
+            {/* <!-- Dropdown Menu --> */}
+            <div class="dropdown-menu w-32 text-xs bg-white shadow-lg">
+              <Link href="#" class="block px-4 py-2  hover:bg-gray-600">
+                Product 1
+              </Link>
+              <Link href="#" class="block px-4 py-2 hover:bg-gray-600">
+                Product 2
+              </Link>
+              {/* <!-- Add more dropdown items as needed --> */}
+            </div>
+          </div>
         </li>
         <li className="md:m-8 m-2 text-xs md:text-xl px-2 py-2 inline hover:text-green-500 rounded-2xl">
           <Link href="#contact">Contact Us</Link>

@@ -10,7 +10,7 @@ function Footer() {
           </p>
         </div>
       </footer> */}
-      <footer className="bg-black text-white text-center p-2 bottom-0 mt-4">
+      <footer className="bg-black text-white text-center p-2 fixed left-0 right-0 bottom-0 mt-auto">
         <p>© Rasina Fashion - All Rights Reserved</p>
       </footer>
     </>

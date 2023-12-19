@@ -55,7 +55,7 @@
 
   #home::before {
     content: "";
-    background: url('../bg1.jpg') no-repeat center center/cover;
+    background: url('../public/Images/Tshirts/geoffroy-danest-0fG6zACWGJY-unsplash.jpg') no-repeat center center/cover;
     height: 100%;
     top:0px;
     left:0px;

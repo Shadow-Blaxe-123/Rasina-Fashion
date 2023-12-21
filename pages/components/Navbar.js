@@ -33,12 +33,37 @@ const Navbar = () => {
             </div>
             {/* <!-- Dropdown Menu --> */}
             <div className="dropdown-menu w-32 text-xs bg-white shadow-lg">
-              <Link href="#" className="block px-4 py-2  hover:bg-gray-600">
-                Product 1
+              <Link
+                href={"/tshirts"}
+                className="block px-4 py-2  hover:bg-gray-600"
+              >
+                T-Shirts
               </Link>
-              <Link href="#" className="block px-4 py-2 hover:bg-gray-600">
-                Product 2
+              <Link
+                href={"/tanktops"}
+                className="block px-4 py-2  hover:bg-gray-600"
+              >
+                Tank Tops
               </Link>
+              <Link
+                href={"/poloshirts"}
+                className="block px-4 py-2  hover:bg-gray-600"
+              >
+                Polo Shirts
+              </Link>
+              <Link
+                href={"/hoodies"}
+                className="block px-4 py-2  hover:bg-gray-600"
+              >
+                Hoodies
+              </Link>
+              <Link
+                href={"/joggers"}
+                className="block px-4 py-2  hover:bg-gray-600"
+              >
+                Joggers
+              </Link>
+
               {/* <!-- Add more dropdown items as needed --> */}
             </div>
           </div>

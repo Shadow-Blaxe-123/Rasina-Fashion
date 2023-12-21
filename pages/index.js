@@ -9,7 +9,7 @@ export default function Home() {
       >
         <div className="text-white  z-10 m-auto ">
           <h2 className="font-black text-6xl border-b-2 border-green-500">
-            Welcome to Rasina Fashion.
+            Welcome to our Website.
           </h2>
           <br />
           <p className="flex align-middle justify-center text-3xl">

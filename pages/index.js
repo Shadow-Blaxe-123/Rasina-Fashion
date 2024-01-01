@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
+      {/* TODO: Add Anushka's Photo after blurring the background and it should always be the first one on the Animation. */}
       <div
         id="home"
         className="h-screen -z-10 flex align-middle justify-center"

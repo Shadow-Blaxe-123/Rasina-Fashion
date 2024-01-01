@@ -3,6 +3,7 @@ import React from "react";
 function about() {
   return (
     <div className="mx-4 my-40 md:m-32">
+      {/* TODO: Change the content according to the file provided */}
       <h2 className="text-4xl font-extrabold font-sans bg-white border-b-4 p-2 flex justify-center align-middle">
         About Rasina Fashion
       </h2>

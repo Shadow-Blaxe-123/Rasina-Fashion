@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      {/* TODO: Add Anushka's Photo after blurring the background and it should always be the first one on the Animation. */}
       {/* TODO: Add a clients section that displays images of clients similar to the products page.*/}
       <div
         id="home"

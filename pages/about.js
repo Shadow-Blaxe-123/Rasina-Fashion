@@ -3,7 +3,6 @@ import React from "react";
 function about() {
   return (
     <div className="mx-4 my-40 md:m-32">
-      {/* TODO: Change the content according to the file provided */}
       <h2 className="text-4xl font-extrabold font-sans bg-white border-b-4 p-2 flex justify-center align-middle">
         About Rasina Fashion
       </h2>
@@ -20,31 +19,45 @@ function about() {
           is also specialized working with local fabrics and trims having
           sourcing office in Bangladesh to source as per buyer’s requirement.
         </p>
-      </div>
-      <div className="mt-8">
-        <h3 className="text-3xl font-bold">Our Journey</h3>
+
         <p className="p-5 text-2xl">
-          Founded in 2021, Rasina Fashion embarked on a journey fueled by a
-          passion for delivering exceptional garments. What started as a small
-          workshop has evolved into a state-of-the-art manufacturing facility,
-          blending traditional craftsmanship with modern technology. The
-          inception of Rasina Fashion marks a significant milestone in the realm
-          of garment creation. Fueled by a passion for precision and a
-          commitment to excellence, our journey began with a simple yet profound
-          aspiration: to introduce a new standard of craftsmanship to the
-          industry.
+          OUR GARMENTS QUALITY STRICTLY CONTROLED BY OUR EXPERIENCED QUALITY
+          CONTROLLER.
         </p>
       </div>
       <div className="mt-8">
-        <h3 className="text-3xl font-bold">Crafting Excellence</h3>
+        <h3 className="text-3xl font-bold">Company at a glance:</h3>
         <p className="p-5 text-2xl">
-          At Rasina Fashion, every garment is a masterpiece meticulously crafted
-          by skilled artisans and designers. From the drawing board to the final
-          stitches, our creations are infused with artistry, meticulous
-          attention to detail, and a blend of modern trends and timeless
-          elegance.
+          <b> Company Name:</b> Rasina Fashion
+          <br />
+          <b>Type of Business: </b>Manufacturer and Exporter
+          <br />
+          <b>Year of Establishment: </b>2020
         </p>
       </div>
+      <div className="mt-8">
+        <h3 className="text-3xl font-bold">Fabrics which we use:</h3>
+        <p className="p-5 text-2xl">
+          100% Cotton Single Jersey, 1x1 Rib, Pique, Lacoste, Lycra single
+          Jersey, Lycra Lacoste etc.
+          <br />
+          60% cotton / 40% Polyester single jersey, 1x1 Rib, Pique, Lacoste,
+          Lycra single jersey etc.
+          <br />
+          65% cotton / 35% Polyester single jersey, 1x1 Rib, Pique, Lacoste,
+          Lycra single jersey etc. <br />
+          65% polyester / 35% cotton single jersey, 1x1 Rib, Pique, Lacoste,
+          Lycra single jersey etc.
+          <br />
+          85% cotton / 15% viscose single jersey, 1x1 Rib, Pique, Lacoste, Lycra
+          single jersey etc.
+          <br />
+          90% cotton / 10% viscose single jersey, 1x1 Rib, Pique, Lacoste, Lycra
+          single jersey etc.
+          <br />
+        </p>
+      </div>
+      {/* TODO: ADD more info from the word document */}
       <div className="mt-8">
         <h3 className="text-3xl font-bold">Innovative Approach</h3>
         <p className="p-5 text-2xl">

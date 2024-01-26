@@ -9,18 +9,16 @@ function about() {
       </h2>
       <div>
         <p className="p-5 text-2xl">
-          At Rasina Fashion, we take pride in our legacy of crafting
-          high-quality garments that resonate with elegance, comfort, and style.
-          With years of expertise in the fashion industry, we have established
-          ourselves as a leading manufacturer of premium clothing, dedicated to
-          exceeding our customers &apos; expectations.
-        </p>
-        <p className="p-5 text-2xl">
-          Rasina Fashion, established in the vibrant year of 2021, embodies a
-          vision to redefine the landscape of garment manufacturing. We pride
-          ourselves on being at the forefront of fashion innovation, crafting
-          exceptional clothing that reflects elegance, quality, and contemporary
-          style.
+          Rasina Fashion is a manufacturer and exporter of all kind’s of knitted
+          garments. It’s established at one of the prime industrial zones in old
+          city of Narayanganj. 120 minutes drive from Dhaka International
+          Airport. It is a established from 2020. This company have professional
+          experiences and qualified management take care of the order which
+          buyer provide us with trust. The factory is specializes producing
+          Ladies and Men’s Kid’s, Child. Baby t-shirt, Polo shirt, fleece
+          jacket’s, shorts, Trouser and all kinds of all knit items. The factory
+          is also specialized working with local fabrics and trims having
+          sourcing office in Bangladesh to source as per buyer’s requirement.
         </p>
       </div>
       <div className="mt-8">

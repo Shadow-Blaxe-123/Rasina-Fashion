@@ -59,13 +59,78 @@ function about() {
       </div>
       {/* TODO: ADD more info from the word document */}
       <div className="mt-8">
-        <h3 className="text-3xl font-bold">Innovative Approach</h3>
-        <p className="p-5 text-2xl">
-          Innovation is the cornerstone of our identity. Embracing the latest
-          technologies and trends, we consistently strive to innovate, pushing
-          boundaries to deliver garments that captivate, inspire, and resonate
-          with the evolving fashion preferences of our discerning clientele.
-        </p>
+        <h3 className="text-3xl font-bold">Knitting Machine Information</h3>
+        <div className="p-2 text-2xl">
+          <table className="w-full mt-5 border-collapse">
+            <thead className="text-left ">
+              <tr>
+                <th className="border border-solid border-black">NO.</th>
+                <th className="border border-solid border-black">DIA</th>
+                <th className="border border-solid border-black">G.G</th>
+                <th className="border border-solid border-black">M/C TYPE</th>
+                <th className="border border-solid border-black">BRAND</th>
+                <th className="border border-solid border-black">ORIGIN</th>
+                <th className="border border-solid border-black">QUANTITY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td>20’’</td>
+                <td>24</td>
+                <td>S/J</td>
+                <td>FUKUHAMA</td>
+                <td>TAIWAN</td>
+                <td>2 SET</td>
+              </tr>
+              <tr>
+                <td>2.</td>
+                <td>21’’</td>
+                <td>24</td>
+                <td>S/J</td>
+                <td>FUKUHAMA</td>
+                <td>TAIWAN</td>
+                <td>2 SET</td>
+              </tr>
+              <tr>
+                <td>3.</td>
+                <td>22’’</td>
+                <td>24</td>
+                <td>S/J</td>
+                <td>DAE YANG</td>
+                <td>KOREA</td>
+                <td>2 SET</td>
+              </tr>
+              <tr>
+                <td>4.</td>
+                <td>23’’</td>
+                <td>24</td>
+                <td>S/J</td>
+                <td>DAE YANG</td>
+                <td>KOREA</td>
+                <td>2 SET</td>
+              </tr>
+              <tr>
+                <td>5.</td>
+                <td>24’’</td>
+                <td>24</td>
+                <td>S/J</td>
+                <td>DAE YANG</td>
+                <td>KOREA</td>
+                <td>2 SET</td>
+              </tr>
+              <tr>
+                <td>6.</td>
+                <td>36’’</td>
+                <td>16</td>
+                <td>RIB LYCRA ATTACH</td>
+                <td>FUKUHAMA</td>
+                <td>TAIWAN</td>
+                <td>1 SET</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div className="mt-8">
         <h3 className="text-3xl font-bold">Commitment to Sustainability </h3>

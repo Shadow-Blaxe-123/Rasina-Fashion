@@ -1,16 +1,14 @@
-import React from "react";
 import { useRouter } from "next/router";
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 
-function Slug() {
+export default function CategoryPage({ imagePaths, slug }) {
   const router = useRouter();
-  const { slug } = router.query;
-  // components/ImageGallery.js
-  const imageCount = 5; // Update this with the number of images in your folder
-  const imagePaths = Array.from(
-    { length: imageCount },
-    (_, i) => `/Images/${slug}/${slug}-${i + 1}.jpg`
-  );
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="mx-4 my-40 md:m-32">
@@ -21,24 +19,29 @@ function Slug() {
           </h2>
           <div className="container px-5 mx-auto">
             <div className="flex flex-wrap mx-4 justify-center">
-              {imagePaths.map((imagePath, index) => {
-                return (
+              {imagePaths.length > 0 ? (
+                imagePaths.map((imagePath, index) => (
                   <div
                     className="lg:w-1/4 md:w-1/2 p-3 w-full shadow-lg m-8"
                     key={index}
                   >
-                    <div className="block relative  rounded overflow-hidden">
+                    <div className="block relative rounded overflow-hidden">
                       <Image
                         width={400}
-                        height={60}
-                        alt="ecommerce"
-                        className="m-auto md:mx-0 h-[30vh]  md:h-[36vh] block"
+                        height={300}
+                        layout="intrinsic"
+                        alt="Product"
+                        className="m-auto md:mx-0 h-[30vh] md:h-[36vh] block"
                         src={imagePath}
                       />
                     </div>
                   </div>
-                );
-              })}
+                ))
+              ) : (
+                <p className="text-gray-500 text-center">
+                  No images available.
+                </p>
+              )}
             </div>
           </div>
         </section>
@@ -47,4 +50,24 @@ function Slug() {
   );
 }
 
-export default Slug;
+// ✅ **Fetch images dynamically when the user visits the page**
+export async function getServerSideProps({ params }) {
+  const { slug } = params;
+  const folderPath = path.join(process.cwd(), `public/Images/${slug}`);
+  let imagePaths = [];
+
+  try {
+    if (fs.existsSync(folderPath)) {
+      imagePaths = fs
+        .readdirSync(folderPath)
+        .filter((file) => /\.(jpg|jpeg|png|gif)$/i.test(file)) // Only image files
+        .map((file) => `/Images/${slug}/${file}`); // Convert to public URLs
+    }
+  } catch (error) {
+    console.error(`Error reading images from ${slug}:`, error);
+  }
+
+  return {
+    props: { imagePaths, slug },
+  };
+}
